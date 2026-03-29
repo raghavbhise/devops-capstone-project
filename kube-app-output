@@ -1,0 +1,5 @@
+{
+  "status": "OK",
+  "message": "Accounts service is running",
+  "version": "1.0.0"
+}
