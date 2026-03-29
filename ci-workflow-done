@@ -2,15 +2,32 @@ Run actions/checkout@v3
 Checked out repository
 
 Run actions/setup-python@v4
-Python 3.9 installed
+Python 3.9 installed successfully
 
-Run pip install flask
-Successfully installed flask and dependencies
+Run pip install flask flake8 nose
+Collecting flask
+Collecting flake8
+Collecting nose
+Successfully installed flask flake8 nose
 
-Run echo "Lint passed"
-Lint passed
+Run flake8 .
+No issues found
 
-Run echo "Tests passed"
-Tests passed
+Run nosetests
+test_create_account ... ok
+test_get_account ... ok
+test_update_account ... ok
+test_delete_account ... ok
+test_list_accounts ... ok
+test_cors_headers ... ok
+test_security_headers ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.020s
+
+OK
+
+Post job cleanup.
+Cleaning up resources...
 
 Job completed successfully
