@@ -1,0 +1,5 @@
+Command:
+curl -X DELETE http://localhost:5000/accounts/1
+
+Output:
+{}
