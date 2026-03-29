@@ -1,0 +1,11 @@
+Command:
+curl -X POST http://localhost:5000/accounts \
+-H "Content-Type: application/json" \
+-d '{"name":"Raghav","email":"raghav@gmail.com"}'
+
+Output:
+{
+  "id": 1,
+  "name": "Raghav",
+  "email": "raghav@gmail.com"
+}
