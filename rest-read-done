@@ -1,0 +1,9 @@
+Command:
+curl -X GET http://localhost:5000/accounts/1
+
+Output:
+{
+  "id": 1,
+  "name": "Raghav",
+  "email": "raghav@gmail.com"
+}
