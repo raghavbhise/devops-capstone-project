@@ -4,6 +4,9 @@ curl -X PUT http://localhost:5000/accounts/1 \
 -d '{"name":"Raghav Updated","email":"raghav_updated@gmail.com"}'
 
 Output:
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
   "id": 1,
   "name": "Raghav Updated",
