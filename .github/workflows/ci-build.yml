@@ -1,6 +1,6 @@
 name: CI Pipeline
 
-on: 
+on:
   push:
     branches:
       - main
@@ -19,11 +19,15 @@ jobs:
           python-version: '3.9'
     
       - name: Install dependencies
-        run: pip install flask
+        run: |
+          pip install flask
+          pip install flake8
+          pip install nose
     
-      - name: Lint
-        run: echo "Lint passed"
+      - name: Lint with flake8
+        run: |
+          flake8 .
     
-      - name: Run tests
-        run: echo "Tests passed"
-
+      - name: Run unit tests
+        run: |
+          nosetests
