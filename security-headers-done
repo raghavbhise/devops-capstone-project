@@ -1,0 +1,10 @@
+test_create_account ... ok
+test_get_account ... ok
+test_update_account ... ok
+test_delete_account ... ok
+test_list_accounts ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+OK
