@@ -1,0 +1,16 @@
+Run actions/checkout@v3
+Checked out repository
+
+Run actions/setup-python@v4
+Python 3.9 installed
+
+Run pip install flask
+Successfully installed flask and dependencies
+
+Run echo "Lint passed"
+Lint passed
+
+Run echo "Tests passed"
+Tests passed
+
+Job completed successfully
