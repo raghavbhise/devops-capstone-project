@@ -1,12 +1,11 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_talisman import Talisman
 
-def create_app():
-app = Flask(**name**)
+app = Flask(__name__)
 
-```
-# Enable security headers using Talisman
+# Enable security headers
 Talisman(app)
 
-return app
-```
+@app.route("/")
+def index():
+    return jsonify({"message": "Secure App Running"})
