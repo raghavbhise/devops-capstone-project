@@ -1,5 +1,5 @@
 Command:
-curl -X PUT http://localhost:5000/accounts/1 \
+curl -i -X PUT http://localhost:5000/accounts/1 \
 -H "Content-Type: application/json" \
 -d '{"name":"Raghav Updated","email":"raghav_updated@gmail.com"}'
 
