@@ -1,5 +1,7 @@
-{
-  "status": "OK",
-  "message": "Accounts service is running",
-  "version": "1.0.0"
-}
+[
+  {
+    "id": 1,
+    "name": "Raghav",
+    "email": "raghav@gmail.com"
+  }
+]
