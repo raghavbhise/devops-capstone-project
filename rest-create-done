@@ -1,5 +1,5 @@
 Command:
-curl -X POST http://localhost:5000/accounts \
+curl -i -X POST http://localhost:5000/accounts \
 -H "Content-Type: application/json" \
 -d '{"name":"Raghav","email":"raghav@gmail.com"}'
 
