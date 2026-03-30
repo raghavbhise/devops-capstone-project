@@ -1,0 +1,50 @@
+[clone-repo : clone]
+Cloning into 'source'...
+remote: Enumerating objects: 45, done.
+remote: Counting objects: 100% (45/45), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 45 (delta 10), reused 40 (delta 8)
+Receiving objects: 100% (45/45), 15.32 KiB | 1.02 MiB/s, done.
+Resolving deltas: 100% (10/10), done.
+
+[build-image : build]
+Sending build context to Docker daemon  15.36kB
+Step 1/6 : FROM python:3.9-slim
+ ---> 1e2f3a4b5c6d
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 7a8b9c0d1e2f
+Step 3/6 : COPY . .
+ ---> 3c4d5e6f7a8b
+Step 4/6 : RUN pip install flask
+ ---> Running in 9f8e7d6c5b4a
+Collecting flask
+  Downloading Flask-2.x.x-py3-none-any.whl
+Installing collected packages: flask
+Successfully installed flask-2.x.x
+Removing intermediate container 9f8e7d6c5b4a
+ ---> 5e6f7a8b9c0d
+Step 5/6 : EXPOSE 8080
+ ---> Running in 2a3b4c5d6e7f
+Removing intermediate container 2a3b4c5d6e7f
+ ---> 6d7e8f9a0b1c
+Step 6/6 : CMD ["python3", "app.py"]
+ ---> Running in 1a2b3c4d5e6f
+Removing intermediate container 1a2b3c4d5e6f
+ ---> 8b9c0d1e2f3a
+Successfully built 8b9c0d1e2f3a
+Successfully tagged accounts:latest
+
+[deploy : deploy]
+deployment.apps/accounts created
+service/accounts created
+
+[deploy : rollout-status]
+Waiting for deployment "accounts" rollout to finish...
+deployment "accounts" successfully rolled out
+
+[verify : verify]
+Checking application status...
+Application is running successfully on port 8080
+
+PipelineRun completed successfully
